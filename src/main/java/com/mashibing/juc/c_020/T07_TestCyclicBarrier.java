@@ -20,8 +20,8 @@ public class T07_TestCyclicBarrier {
 
                 new Thread(()->{
                     try {
+                        System.out.println(Thread.currentThread().getName()+":run");
                         barrier.await();
-
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } catch (BrokenBarrierException e) {
