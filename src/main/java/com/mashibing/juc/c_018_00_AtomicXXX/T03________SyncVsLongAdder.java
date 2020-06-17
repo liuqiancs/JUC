@@ -1,3 +1,6 @@
+/**
+ * LongAdder jdk1.8新增的，采用的分段锁，每段仍然是CAS加锁
+ */
 package com.mashibing.juc.c_018_00_AtomicXXX;
 
 import java.util.concurrent.TimeUnit;

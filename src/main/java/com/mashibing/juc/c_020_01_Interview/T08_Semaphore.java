@@ -3,10 +3,9 @@ package com.mashibing.juc.c_020_01_Interview;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.locks.LockSupport;
 
 public class T08_Semaphore {
-    // 添加volatile，使t2能够得到通知
+    // 娣诲姞volatile锛屼娇t2鑳藉寰楀埌閫氱煡
     volatile List lists = new ArrayList();
 
     public void add(Object o) {
@@ -24,7 +23,13 @@ public class T08_Semaphore {
         Semaphore s = new Semaphore(1);
 
         t1 = new Thread(() -> {
-            try {
+            for (int i = 0; i < 5; i++) {
+                c.add(new Object());
+                System.out.println("add " + i);
+
+
+            }
+/*            try {
                 s.acquire();
                 for (int i = 0; i < 5; i++) {
                     c.add(new Object());
@@ -35,7 +40,7 @@ public class T08_Semaphore {
                 s.release();
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }
+            }*/
 
             try {
                 t2.start();
@@ -44,29 +49,17 @@ public class T08_Semaphore {
                 e.printStackTrace();
             }
 
-            try {
-                s.acquire();
-                for (int i = 5; i < 10; i++) {
-                    System.out.println(i);
-                }
-                s.release();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            for (int i = 5; i < 10; i++) {
+                System.out.println("add " + i);
             }
+
 
         }, "t1");
 
         t2 = new Thread(() -> {
-            try {
-                s.acquire();
-                System.out.println("t2 结束");
-                s.release();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            System.out.println("t2 缁撴潫");
         }, "t2");
 
-        //t2.start();
         t1.start();
     }
 }

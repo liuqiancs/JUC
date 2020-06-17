@@ -2,6 +2,7 @@ package com.mashibing.juc.c_000;
 
 public class T03_Sleep_Yield_Join {
     public static void main(String[] args) {
+//        参考：sleep，yield，join具体参考https://www.cnblogs.com/btdxqz/p/12711526.html
 //        testSleep();
 //        testYield();
         testJoin();
@@ -61,7 +62,7 @@ public class T03_Sleep_Yield_Join {
             }
 
             for(int i=0; i<100; i++) {
-                System.out.println("A" + i);
+                System.out.println("B" + i);
                 try {
                     Thread.sleep(500);
                     //TimeUnit.Milliseconds.sleep(500)

@@ -1,3 +1,6 @@
+/**
+ * Unsafe为内部使用，已经不提供外部使用了
+ */
 package com.mashibing.juc.c_018_01_Unsafe;
 
 //import sun.misc.*;

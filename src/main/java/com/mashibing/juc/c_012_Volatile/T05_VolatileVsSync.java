@@ -1,5 +1,5 @@
 /**
- * �Ա���һ�����򣬿�����synchronized�����synchronized���Ա�֤�ɼ��Ժ�ԭ���ԣ�volatileֻ�ܱ�֤�ɼ���
+ * 对比上一个程序，可以用synchronized解决，synchronized可以保证可见性,原子性,有序性，volatile只能保证可见性，有序性
  * @author mashibing
  */
 package com.mashibing.juc.c_012_Volatile;

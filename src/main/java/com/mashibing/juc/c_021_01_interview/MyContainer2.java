@@ -66,7 +66,7 @@ public class MyContainer2<T> {
 		//启动消费者线程
 		for(int i=0; i<10; i++) {
 			new Thread(()->{
-				for(int j=0; j<5; j++) System.out.println(c.get());
+				for(int j=0; j<5; j++) System.out.println(Thread.currentThread().getName()+" "+c.get());
 			}, "c" + i).start();
 		}
 		

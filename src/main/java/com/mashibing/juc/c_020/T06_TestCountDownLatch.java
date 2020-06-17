@@ -4,7 +4,7 @@ import java.util.concurrent.CountDownLatch;
 
 public class T06_TestCountDownLatch {
     public static void main(String[] args) {
-        usingJoin();
+        //usingJoin();
         usingCountDownLatch();
     }
 

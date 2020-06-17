@@ -1,19 +1,20 @@
 /**
  * http://blog.csdn.net/sunxianghuang/article/details/52221913 
  * http://www.educity.cn/java/498061.html
- * ÔÄ¶Áconcurrentskiplistmap
+ * é˜…è¯»concurrentskiplistmap
  */
 package com.mashibing.juc.c_025;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CountDownLatch;
 
 public class T01_ConcurrentMap {
 	public static void main(String[] args) {
 		Map<String, String> map = new ConcurrentHashMap<>();
-		//Map<String, String> map = new ConcurrentSkipListMap<>(); //¸ß²¢·¢²¢ÇÒÅÅĞò
+		//Map<String, String> map = new ConcurrentSkipListMap<>(); //é«˜å¹¶å‘å¹¶ä¸”æ’åº
 		
 		//Map<String, String> map = new Hashtable<>();
 		//Map<String, String> map = new HashMap<>(); //Collections.synchronizedXXX
